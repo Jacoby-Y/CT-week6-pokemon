@@ -1,5 +1,5 @@
-## Coding Temple Week 6 Day 1 Homework
-###### CT-week6-day1-homework
+## Coding Temple Week 6 Pokemon Project
+###### CT-week6-pokemon
 
 #### Env variables
 ```
