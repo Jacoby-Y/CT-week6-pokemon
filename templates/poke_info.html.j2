@@ -1,0 +1,24 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+  Info
+{% endblock %}
+
+{% block content %}
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <h1 class="p-4">{{poke.name}}</h1>
+    <img class="img-fluid w-25" src="{{poke.sprites.front_default}}" />
+    <h3> Ability: {{poke.abilities[0].ability.name}} </h3>
+    {% for p in poke.stats %}
+      {% if p.stat.name == "hp" %}
+        <h3> HP Stat: {{p.base_stat}}</h3>
+      {% elif p.stat.name == "attack" %}
+        <h3> Attack Stat: {{p.base_stat}} </h3>
+      {% elif p.stat.name == "defense" %}
+        <h3> Defense Stat: {{p.base_stat}}</h3>
+      {# {% else %}
+        <h3> {{p}} ...</h3> #}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
